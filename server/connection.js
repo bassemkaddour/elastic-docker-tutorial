@@ -27,7 +27,7 @@ async function resetIndex() {
     await client.indices.delete({ index });
   }
 
-  await client.indicies.create({ index });
+  await client.indices.create({ index });
   await putBookMapping();
 }
 
@@ -39,7 +39,7 @@ async function putBookMapping() {
     text: { type: 'text' }
   }
 
-  return client.indicies.putMapping({ index, type, body: { properties: schema } });
+  return client.indices.putMapping({ index, type, body: { properties: schema } });
 }
 
 module.exports = {
