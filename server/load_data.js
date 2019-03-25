@@ -27,7 +27,7 @@ function parseBookFile(filePath) {
 
   const title = book.match(/^Title:\s(.+)$/m)[1];
   const authorMatch = book.match(/^Author:\s(.+)$/m);
-  const author = (!authorMatch || authorMatch[1].trim() === '') ? 'Unknown Author' : authorMatch[1]
+  const author = (!authorMatch || authorMatch[1].trim() === '') ? 'Unknown Author' : authorMatch[1];
 
   console.log(`Reading Book - ${title} By ${author}`);
 
